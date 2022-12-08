@@ -10,7 +10,7 @@ def part1(file):
 
     for line in crates.splitlines():
         # reads line, starts at 1, ends at end of line length, reads each 4th item
-        # creates an enumerate of those results
+        # creates an enumerate of those results (index, location)
         for stackIdx, lineIdx in enumerate(range(1, len(line), 4)):
             # if it finds a value add it to the end of the corresponding stack
             if line[lineIdx] != " ":
