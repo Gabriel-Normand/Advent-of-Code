@@ -45,8 +45,8 @@ def part2(data):
                     break
             siteScore *= direction
             scores.append(siteScore)
-    # iterate through each score and return the max
-    return max(score for score in scores)
+    # iterate through each scores and return the max
+    return max(*scores)
 
 
 data = open("inputs/day08.txt").read().strip().splitlines()
