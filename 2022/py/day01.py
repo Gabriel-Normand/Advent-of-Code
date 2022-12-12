@@ -10,9 +10,8 @@ def part1(elves):
 
 def part2(elves):
     calories = []
-    for elf in elves:
         # same as before but save all sums in a list
-        calories.append(sum(map(int, elf.split())))
+    calories.append(sum(map(int, (elf.split() for elf in elves))))
     # sort the list and return the sum of the last 3 (highest) values
     calories.sort()
     return sum(calories[-3:])
